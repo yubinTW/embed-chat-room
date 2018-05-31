@@ -16,7 +16,11 @@ let sendButton = document.getElementById('send-button');
 let loading = document.getElementById('loading');
 let uploadInput = document.getElementById('upload');
 let progressNumber = document.getElementById('prograssNumber');
-let name = 'yubin testing';
+
+
+let user = document.querySelector('.member-box > a').text.match(/\S+/g) || [] ;
+let userName = user[0] || '';
+let userTitle = user[2].slice(5) || '';
 
 let url;
 let articleRef;
@@ -37,11 +41,11 @@ articleRef.on('value', function(snap){
         let item = val[key];
         block.setAttribute('class', 'msg');
         if (Boolean(item.type) === false || item.type === 'text') {
-            block.innerHTML = `<span>${item.name}</span><p title='${item.time}'>${item.message}</p>`;
+            block.innerHTML = `<span title='${item.userTitle}'>${item.name}</span><p title='${item.time}'>${item.message}</p>`;
         } else if (item.type === 'image') {
-            block.innerHTML = `<span>${item.name}</span><img src="${item.message}" title='${item.time}'>`;
+            block.innerHTML = `<span title='${item.userTitle}'>${item.name}</span><img src="${item.message}" title='${item.time}'>`;
         } else if (item.type === 'file') {
-            block.innerHTML = `<span>${item.name}</span><p title='${item.time}'><a href="${item.message}" target='_blank'>${item.filename}</a></p>`;
+            block.innerHTML = `<span title='${item.userTitle}'>${item.name}</span><p title='${item.time}'><a href="${item.message}" target='_blank'>${item.filename}</a></p>`;
         }
         chatContent.appendChild(block);
     }
@@ -55,9 +59,10 @@ sendButton.addEventListener('click', function(e){
       return false;
     }
     articleRef.push({
-      name: name,
+      name: userName,
       type: 'text',
       message: inputMessage,
+      userTitle: userTitle || '',
       time: getTime()
     });
     messageInput.value = '';
@@ -99,9 +104,10 @@ uploadInput.addEventListener('change', function (e) {
         uploadTask.snapshot.ref.getDownloadURL()
         .then( (url) => {
             articleRef.push({
-            name: name,
+            name: userName,
             type: 'file',
             message: url,
+            userTitle: userTitle || '',
             filename: file.name,
             time: getTime()
             });

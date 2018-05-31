@@ -30,6 +30,7 @@
 }
 #message-input {
     width: 100%;
+    padding: 2px 5px;
 }
 #loading {
     margin-left: 1em;
