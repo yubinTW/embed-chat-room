@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="dodo-chat.css">
+    </head>
+    <body>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati animi ea, labore repellendus corrupti fuga consequatur sunt harum quos officia ex autem rerum commodi deserunt soluta molestiae ad iusto. Ipsum!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem doloribus maxime quas distinctio quos! Amet sapiente alias, provident ab harum at odit in. Consectetur quia repellendus officiis, exercitationem vero laboriosam rem omnis nobis amet obcaecati reprehenderit odio eius vel ipsa ipsam quos possimus pariatur necessitatibus doloremque harum veritatis nostrum molestiae.</p>
+        <button id="chat-btn" class="btn btn-success">
+          <img src="images/chat-speech-bubbles_32.png" alt="chat icon">
+        </button>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure labore maiores ipsum eos facilis magnam libero id delectus illum vel? Quidem quae recusandae officiis sapiente eligendi alias, consequuntur deserunt, ducimus debitis voluptatum vero laborum optio ab nobis atque nostrum beatae nemo quasi similique maxime eveniet pariatur eos! Accusamus, modi provident.</p>
+        
+        <div id="chat-room" class='hide'>  
+            
+          <div class="content" id="content">
+            <p id="loading">Loading...</p>
+          </div>
+          <div class="prograss">
+            <div id="prograssBar"></div>
+            <span id="prograssNumber"></span>
+          </div>
+          <div class="send">
+            <textarea type="text" name="input" id="input" rows=2 cols="15"></textarea>
+            <div class="image-upload">
+              <label for="upload" title="send file">
+                <img src="images/paper-clip.png" alt="file icon">
+              </label>
+              <input type="file" name="upload" id="upload" accept="*">      
+            </div>
+            <button id="sendButton" class="btn btn-success" title="send message">Send</button>
+          </div>
+        </div>
+        
+        
+        <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+        <script src='dodo-chat.js'></script>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+#chat-room {
+    width: 500px;
+    height: 300px;    
+}
+
+.content {
+    width: 100%;
+    height: 300px;
+    max-height: 300px;
+    background-color: #DDD;
+    overflow-y: scroll;
+}
+.send {
+    position: relative;
+}
+.image-upload {
+    position: absolute;
+    right: 4em;
+    top: 5px;
+}
+.image-upload > input {
+    display: none;
+}
+.image-upload > label {
+    cursor: pointer;
+    padding: 0px 5px;
+}
+#sendButton {
+    width: 4em;
+}
+#input {
+    width: 100%;
+}
+#loading {
+    margin-left: 1em;
+}
+.msg span {
+    font-family: '微軟正黑體';
+    font-size: 1.2em;    
+    margin-left: 2px;
+    text-decoration: underline;
+}
+.msg span::after {
+    content: ':';
+}
+.msg p {
+    font-family: '微軟正黑體';
+    margin-left: 2em;
+}
+.msg img {
+    max-width: 60%;
+    margin-left: 2em;
+    display: block;
+}
+.send {
+    display: flex;
+}
+.hide {
+    display: none;
+}
