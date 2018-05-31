@@ -1,13 +1,13 @@
 #chat-room {
-    width: 500px;
-    height: 300px;    
+    width: 100%;
+    margin: 10px auto;
+    background-color: #FFF;
 }
 
 .chat-content {
     width: 100%;
     height: 300px;
-    max-height: 300px;
-    background-color: #DDD;
+    background-color: #FFF;
     overflow-y: scroll;
 }
 .send-func {
