@@ -1,0 +1,27 @@
+<!-- chat-room -->
+<button id="chat-btn" class="btn" type="button">留言</button>
+<link href="https://yubintw.github.io/embed-chat-room/dodo-chat.css" rel="stylesheet">
+<div id="chat-room" class='hide'>  
+   <div class="chat-content" id="chat-content">
+      <p id="loading">Loading...</p>
+   </div>
+   <div class="prograss">
+      <div id="prograssBar"></div>
+      <span id="prograssNumber"></span>
+   </div>
+   <div class="send-func">
+      <textarea type="text" id="message-input" rows=2 cols="15"></textarea>
+      <div class="image-upload">
+        <label for="upload" title="send file">
+          <img src="https://yubintw.github.io/embed-chat-room/images/paper-clip.png" alt="file icon">
+        </label>
+      <input type="file" name="upload" id="upload" accept="*">      
+    </div>
+    <button id="send-button" class="btn btn-success" title="send message" type="button">送出</button>
+  </div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-storage.js"></script>
+<script src="https://yubintw.github.io/embed-chat-room/dodo-chat.js"></script>
+<!-- end of chat-room  -->
