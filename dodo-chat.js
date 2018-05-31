@@ -22,9 +22,11 @@ let user = document.querySelector('.member-box > a').text.match(/\S+/g) || [] ;
 let userName = user[0] || '';
 let userTitle = user[2].slice(5) || '';
 
+let currentPath = window.location.pathname;
+
 let url;
 let articleRef;
-let article_id = 12756;
+let article_id = currentPath.split('/')[3] || 'noArticleID';
 let storageRef;
 
 articleRef = firebase.database().ref(article_id);
@@ -41,7 +43,9 @@ articleRef.on('value', function(snap){
         let item = val[key];
         block.setAttribute('class', 'msg');
         if (Boolean(item.type) === false || item.type === 'text') {
-            block.innerHTML = `<span title='${item.userTitle}'>${item.name}</span><p title='${item.time}'>${item.message}</p>`;
+            // avoid xss
+            block.innerHTML = `<span title='${item.userTitle}'>${item.name}</span><p title='${item.time}'></p>`;
+            block.children[1].innerText = item.message;
         } else if (item.type === 'image') {
             block.innerHTML = `<span title='${item.userTitle}'>${item.name}</span><img src="${item.message}" title='${item.time}'>`;
         } else if (item.type === 'file') {
