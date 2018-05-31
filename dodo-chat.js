@@ -137,7 +137,5 @@ chatButton.addEventListener('click', show_chat_room);
 
 function show_chat_room () {
     document.getElementById('chat-room').classList.toggle('hide');
-    document.getElementById('chat-btn').classList.toggle('btn-success');
-    document.getElementById('chat-btn').classList.toggle('btn-warning');
     chatContent.scrollTop = chatContent.scrollHeight;
 } // end of show_chat_room

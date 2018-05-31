@@ -27,6 +27,7 @@
 }
 #send-button {
     width: 4em;
+    height: 40px;
 }
 #message-input {
     width: 100%;
@@ -34,6 +35,9 @@
 }
 #loading {
     margin-left: 1em;
+}
+.msg {
+    margin-top: 5px;
 }
 .msg span {
     font-family: '微軟正黑體';
@@ -46,6 +50,7 @@
 }
 .msg p {
     font-family: '微軟正黑體';
+    margin-top: 0px;
     margin-left: 2em;
 }
 .msg img {
