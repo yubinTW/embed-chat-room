@@ -1,4 +1,4 @@
-var config = {
+var firebase_config = {
     apiKey: "AIzaSyAHpZD_40b20YZF6SfdJEDX35qWFUpgP60",
     authDomain: "dodo-acticle-chat.firebaseapp.com",
     databaseURL: "https://dodo-acticle-chat.firebaseio.com",
@@ -6,28 +6,28 @@ var config = {
     storageBucket: "dodo-acticle-chat.appspot.com",
     messagingSenderId: "993245061372"
 };
-firebase.initializeApp(config);
+firebase.initializeApp(firebase_config);
 
 // get DOM
 let chatButton = document.getElementById('chat-btn');
-let content = document.getElementById('content');
-let input = document.getElementById('input');
-let sendButton = document.getElementById('sendButton');
+let chatContent = document.getElementById('chat-content');
+let messageInput = document.getElementById('message-input');
+let sendButton = document.getElementById('send-button');
 let loading = document.getElementById('loading');
 let uploadInput = document.getElementById('upload');
 let progressNumber = document.getElementById('prograssNumber');
 let name = 'yubin testing';
 
-var url;
-var articleRef;
-var article_id = 12756;
-var storageRef;
+let url;
+let articleRef;
+let article_id = 12756;
+let storageRef;
 
 articleRef = firebase.database().ref(article_id);
 storageRef = firebase.storage().ref("/file/");
 // get database data
 articleRef.on('value', function(snap){
-    content.innerHTML = '';
+    chatContent.innerHTML = '';
     const val = snap.val();
     //console.log('val:', val);
     loading.classList.toggle('hide');
@@ -43,13 +43,13 @@ articleRef.on('value', function(snap){
         } else if (item.type === 'file') {
             block.innerHTML = `<span>${item.name}</span><p title='${item.time}'><a href="${item.message}" target='_blank'>${item.filename}</a></p>`;
         }
-        content.appendChild(block);
+        chatContent.appendChild(block);
     }
-    content.scrollTop = content.scrollHeight;
+    chatContent.scrollTop = chatContent.scrollHeight;
 });
 
 sendButton.addEventListener('click', function(e){
-    let inputMessage = input.value;
+    let inputMessage = messageInput.value;
     if(inputMessage.length === 0){      
       e.preventDefault();
       return false;
@@ -60,12 +60,12 @@ sendButton.addEventListener('click', function(e){
       message: inputMessage,
       time: getTime()
     });
-    input.value = '';
+    messageInput.value = '';
   });
 
 uploadInput.addEventListener('change', function (e) {
-    console.log('onchange');
-    console.log(e);
+    // console.log('onchange');
+    // console.log(e);
     const file = e.target.files[0];
     const size = file.size / 1024 / 1024;
     if (size > 10) {
@@ -129,4 +129,5 @@ function show_chat_room () {
     document.getElementById('chat-room').classList.toggle('hide');
     document.getElementById('chat-btn').classList.toggle('btn-success');
     document.getElementById('chat-btn').classList.toggle('btn-warning');
+    chatContent.scrollTop = chatContent.scrollHeight;
 } // end of show_chat_room

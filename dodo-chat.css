@@ -3,14 +3,14 @@
     height: 300px;    
 }
 
-.content {
+.chat-content {
     width: 100%;
     height: 300px;
     max-height: 300px;
     background-color: #DDD;
     overflow-y: scroll;
 }
-.send {
+.send-func {
     position: relative;
 }
 .image-upload {
@@ -25,10 +25,10 @@
     cursor: pointer;
     padding: 0px 5px;
 }
-#sendButton {
+#send-button {
     width: 4em;
 }
-#input {
+#message-input {
     width: 100%;
 }
 #loading {
@@ -52,7 +52,7 @@
     margin-left: 2em;
     display: block;
 }
-.send {
+.send-func {
     display: flex;
 }
 .hide {
