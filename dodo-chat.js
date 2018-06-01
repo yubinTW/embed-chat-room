@@ -54,6 +54,11 @@ articleRef.on('value', function(snap){
         chatContent.appendChild(block);
     }
     chatContent.scrollTop = chatContent.scrollHeight;
+    if (chatContent.innerText.length !== 0) {
+        if (document.querySelector('#chat-room').classList.contains('hide')) {
+            show_chat_room();
+        }
+    }
 });
 
 sendButton.addEventListener('click', function(e){
