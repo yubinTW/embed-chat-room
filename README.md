@@ -5,3 +5,17 @@
 css及js等檔案皆由此專案提供
 
 可以實現記者與編輯的訊息交換、檔案傳輸
+
+# version 
+
+### 1.0
+- 2018.05.24
+- basic chat function
+
+### 1.1
+- 2018.05.26
+- add send file function
+
+### 2.0
+- 2018.06.11
+- add emoji-picker on textbox
