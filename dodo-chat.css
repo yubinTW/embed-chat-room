@@ -68,9 +68,11 @@
 /*
     emoji-picker
 */
-.emoji-picker-icon {
+.emoji-picker-icon,
+.emoji-picker-icon.parent-has-scroll {
     right: 100px;
 }
 .emoji-wysiwyg-editor {
     width: 100%;
+    padding-left: 5px;
 }
