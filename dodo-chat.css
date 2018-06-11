@@ -75,4 +75,5 @@
 .emoji-wysiwyg-editor {
     width: 100%;
     padding-left: 5px;
+    resize: vertical;
 }
