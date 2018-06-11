@@ -64,3 +64,13 @@
 .hide {
     display: none;
 }
+
+/*
+    emoji-picker
+*/
+.emoji-picker-icon {
+    right: 100px;
+}
+.emoji-wysiwyg-editor {
+    width: 100%;
+}

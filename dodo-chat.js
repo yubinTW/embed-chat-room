@@ -75,6 +75,8 @@ sendButton.addEventListener('click', function(e){
       time: getTime()
     });
     messageInput.value = '';
+    // clear emoji-picker input
+    document.querySelector('.emoji-wysiwyg-editor').innerHTML = '';
   });
 
 uploadInput.addEventListener('change', function (e) {
@@ -157,6 +159,9 @@ $(function() {
     // You may want to delay this step if you have dynamically created input fields that appear later in the loading process
     // It can be called as many times as necessary; previously converted input fields will not be converted again
     window.emojiPicker.discover();
-    
-    $(".emoji-wysiwyg-editor").focus(function() { $("#cke_editor1").remove(); });
+
+    // fix trigger-ckeditor bug
+    document.querySelector('.emoji-wysiwyg-editor').addEventListener('focus', ()=>{
+        $("#cke_editor1").remove();
+    });
 });
