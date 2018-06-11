@@ -157,4 +157,6 @@ $(function() {
     // You may want to delay this step if you have dynamically created input fields that appear later in the loading process
     // It can be called as many times as necessary; previously converted input fields will not be converted again
     window.emojiPicker.discover();
+    
+    $(".emoji-wysiwyg-editor").focus(function() { $("#cke_editor1").remove(); });
 });
