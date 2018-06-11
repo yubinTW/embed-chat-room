@@ -1,5 +1,9 @@
 <!-- chat-room -->
 <button id="chat-btn" class="btn" type="button">留言</button>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<!-- Begin emoji-picker Stylesheets -->
+<link href="https://yubintw.github.io/embed-chat-room/lib/css/emoji.css" rel="stylesheet">
+<!-- End emoji-picker Stylesheets -->
 <link href="https://yubintw.github.io/embed-chat-room/dodo-chat.css" rel="stylesheet">
 <div id="chat-room" class='hide'>  
    <div class="chat-content" id="chat-content">
@@ -10,7 +14,7 @@
       <span id="prograssNumber"></span>
    </div>
    <div class="send-func">
-      <textarea type="text" id="message-input" rows=2 cols="15"></textarea>
+      <textarea type="text" id="message-input" rows=2 cols="15" data-emojiable="true"></textarea>
       <div class="image-upload">
         <label for="upload" title="send file">
           <img src="https://yubintw.github.io/embed-chat-room/images/paper-clip.png" alt="file icon">
@@ -23,5 +27,16 @@
 <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-storage.js"></script>
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Begin emoji-picker JavaScript -->
+<script src="https://yubintw.github.io/embed-chat-room/lib/js/config.js"></script>
+<script src="https://yubintw.github.io/embed-chat-room/lib/js/util.js"></script>
+<script src="https://yubintw.github.io/embed-chat-room/lib/js/jquery.emojiarea.js"></script>
+<script src="https://yubintw.github.io/embed-chat-room/lib/js/emoji-picker.js"></script>
+<!-- End emoji-picker JavaScript -->
+
 <script src="https://yubintw.github.io/embed-chat-room/dodo-chat.js"></script>
+
 <!-- end of chat-room  -->
