@@ -149,7 +149,7 @@ function show_chat_room () {
 $(function() {
     // Initializes and creates emoji set from sprite sheet
     window.emojiPicker = new EmojiPicker({
-      emojiable_selector: '[data-emojiable=true]',
+      emojiable_selector: '[emojiable=true]',
       assetsPath: 'https://yubintw.github.io/embed-chat-room/lib/img/',
       popupButtonClasses: 'fa fa-smile-o'
     });
