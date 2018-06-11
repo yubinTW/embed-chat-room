@@ -163,11 +163,12 @@ $(function() {
     // fix trigger-ckeditor bug
     document.querySelector('.emoji-wysiwyg-editor').addEventListener('focus', ()=>{
         $("#cke_editor1").remove();
+        document.querySelector('.emoji-wysiwyg-editor').removeAttribute('aria-describedby');
+        document.querySelector('.emoji-wysiwyg-editor').removeAttribute('aria-label');
+        document.querySelector('.emoji-wysiwyg-editor').removeAttribute('spellcheck');
+        document.querySelector('.emoji-wysiwyg-editor').removeAttribute('tabindex');
+        document.querySelector('.emoji-wysiwyg-editor').setAttribute('title', '輸入訊息');
     });
-    document.querySelector('.emoji-wysiwyg-editor').removeAttribute('aria-describedby');
-    document.querySelector('.emoji-wysiwyg-editor').removeAttribute('aria-label');
-    document.querySelector('.emoji-wysiwyg-editor').removeAttribute('spellcheck');
-    document.querySelector('.emoji-wysiwyg-editor').removeAttribute('tabindex');
-    document.querySelector('.emoji-wysiwyg-editor').setAttribute('title', '輸入訊息');
+    
 
 });
