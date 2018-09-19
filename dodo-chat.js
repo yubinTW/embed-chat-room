@@ -29,7 +29,7 @@ let articleRef;
 let article_id = currentPath.split('/')[3] || 'noArticleID';
 let storageRef;
 
-articleRef = firebase.database().ref(""+article_id);
+articleRef = firebase.database().ref("/article/"+article_id);
 storageRef = firebase.storage().ref("/file/");
 // get database data
 articleRef.on('value', function(snap){
