@@ -13,7 +13,7 @@
 .send-func {
     display: flex;
     position: relative;
-    
+    height: 100px;
 }
 .image-upload {
     position: absolute;
