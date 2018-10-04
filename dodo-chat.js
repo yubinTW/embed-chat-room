@@ -145,6 +145,8 @@ chatButton.addEventListener('click', show_chat_room);
 function show_chat_room () {
     document.getElementById('chat-room').classList.toggle('hide');
     chatContent.scrollTop = chatContent.scrollHeight;
+    // override editor height
+    document.querySelector('.emoji-wysiwyg-editor.cke_editable.cke_editable_inline.cke_contents_ltr.cke_show_borders').style.height = '100px'
 } // end of show_chat_room
 
 // setting emoji picker
