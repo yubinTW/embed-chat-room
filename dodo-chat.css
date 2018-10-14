@@ -76,6 +76,6 @@
     width: 100%;
     padding-left: 5px;
     resize: vertical;
-    line-height: 6px;
+    line-height: 1em;
     padding-top: 1px;
 }
