@@ -33,6 +33,7 @@ let pathname = location.pathname.toLowerCase();
 let showChatRoom = false;
 
 if (pathname === '/article/lists/personal' ||
+    pathname === '/article/lists/' ||
 	pathname.startsWith('/article/lists/editor') ||
 	(pathname.startsWith('/article/lists/viewall') && userTitle === '助教') ) {
 
