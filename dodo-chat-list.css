@@ -58,6 +58,7 @@
     font-family: '微軟正黑體';
     margin-top: 0px;
     margin-left: 2em;
+    word-wrap: break-word;
 }
 
 .msg img {
