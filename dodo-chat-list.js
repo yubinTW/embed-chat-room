@@ -64,11 +64,19 @@ if (showChatRoom) {
 		// console.log('article_id = ', article_id);
 		// show modal
 		$("#chat-room-modal").modal({
-		  fadeDuration: 100,
-		  width: 1000
-		});
-
-		
+		  fadeDuration: 100
+        });
+        
+        // Initializes and creates emoji set from sprite sheet
+        window.emojiPicker = new EmojiPicker({
+            emojiable_selector: '[emojiable=true]',
+            assetsPath: 'https://yubintw.github.io/embed-chat-room/lib/img/',
+            popupButtonClasses: 'fa fa-smile-o'
+        });
+        // Finds all elements with `emojiable_selector` and converts them to rich emoji input fields
+        // You may want to delay this step if you have dynamically created input fields that appear later in the loading process
+        // It can be called as many times as necessary; previously converted input fields will not be converted again
+        window.emojiPicker.discover();
 
 		articleRef = firebase.database().ref("/article/"+article_id);
 		storageRef = firebase.storage().ref("/file/");
@@ -96,9 +104,10 @@ if (showChatRoom) {
 		    }
 		    chatContent.scrollTop = chatContent.scrollHeight;
 		    if (chatContent.innerText.length !== 0) {
-		        if (document.querySelector('#chat-room').classList.contains('hide')) {
-		            show_chat_room();
-		        }
+		    //     if (document.querySelector('#chat-room').classList.contains('hide')) {
+		    //         show_chat_room();
+            //     }
+            console.log('nothing');
 		    }
 		});
 	});
@@ -107,10 +116,6 @@ if (showChatRoom) {
 
 	});
 }
-
-
-
-
 
 
 sendButton.addEventListener('click', function(e){
@@ -195,15 +200,6 @@ function getTime() {
 
 // setting emoji picker
 $(function() {
-    // Initializes and creates emoji set from sprite sheet
-    window.emojiPicker = new EmojiPicker({
-      emojiable_selector: '[emojiable=true]',
-      assetsPath: 'https://yubintw.github.io/embed-chat-room/lib/img/',
-      popupButtonClasses: 'fa fa-smile-o'
-    });
-    // Finds all elements with `emojiable_selector` and converts them to rich emoji input fields
-    // You may want to delay this step if you have dynamically created input fields that appear later in the loading process
-    // It can be called as many times as necessary; previously converted input fields will not be converted again
-    window.emojiPicker.discover();
+    
 
 });
