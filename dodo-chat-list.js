@@ -194,7 +194,7 @@ function getTime() {
 $(function() {
     // Initializes and creates emoji set from sprite sheet
     window.emojiPicker = new EmojiPicker({
-        emojiable_selector: '[emojiable=true]',
+        emojiable_selector: '[data-emojiable=true]',
         assetsPath: 'https://yubintw.github.io/embed-chat-room/lib/img/',
         popupButtonClasses: 'fa fa-smile-o'
     });
