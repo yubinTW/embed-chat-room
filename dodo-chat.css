@@ -17,8 +17,8 @@
 }
 .image-upload {
     position: absolute;
-    right: 5em;
-    top: 5px;
+    right: 75px;
+    top: 12px;
 }
 .image-upload > input {
     display: none;
@@ -46,6 +46,7 @@
     font-size: 1.2em;    
     margin-left: 2px;
     text-decoration: underline;
+    padding: 0.5em;
 }
 .msg span::after {
     content: ':';
@@ -54,6 +55,8 @@
     font-family: '微軟正黑體';
     margin-top: 0px;
     margin-left: 2em;
+    word-wrap: break-word;
+    padding-right: 6em;
 }
 .msg img {
     max-width: 60%;
@@ -67,9 +70,10 @@
 /*
     emoji-picker
 */
-.emoji-picker-icon,
-.emoji-picker-icon.parent-has-scroll {
-    right: 6em;
+i.emoji-picker-icon.emoji-picker.fa.fa-smile-o {
+    right: 120px;
+    font-size: 27px;
+    top: 12px;
 }
 .emoji-wysiwyg-editor {
     height: 100%;
