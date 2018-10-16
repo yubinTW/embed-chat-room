@@ -49,6 +49,7 @@
     font-size: 1.2em;
     margin-left: 2px;
     text-decoration: underline;
+    padding: 0.5em;
 }
 .msg span::after {
     content: ':';
