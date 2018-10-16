@@ -92,3 +92,11 @@
   overflow-x: hidden;
   overflow-y: hidden;
 }
+
+/* emoji list */
+.emoji-menu > .emoji-items-wrap1 {
+    position: fixed;
+    width: 300px;
+    background-color: #FEFEFE;
+    border: 1px solid #DDD;   
+}
