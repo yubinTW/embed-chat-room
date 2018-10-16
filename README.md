@@ -22,4 +22,8 @@ css及js等檔案皆由此專案提供
 
 ### 2.1
 - 2018.10.04
-- 
+- modify char-room
+
+### 3.0
+- 2018.10.16
+- add chat room on lists
