@@ -26,8 +26,8 @@ let userName = user[0] || '';
 let userTitle = user[2].slice(5) || '';
 let articleRef;
 let storageRef;
-console.log(user);
-console.log(userName, userTitle);
+// console.log(user);
+// console.log(userName, userTitle);
 
 let pathname = location.pathname.toLowerCase();
 let showChatRoom = false;
@@ -61,7 +61,7 @@ if (showChatRoom) {
 	chatButton.addEventListener('click', (e) => {
 		let sibling = e.target.previousElementSibling;
 		var article_id = sibling.getAttribute('rel');
-		console.log('article_id = ', article_id);
+		// console.log('article_id = ', article_id);
 		// show modal
 		$("#chat-room-modal").modal({
 		  fadeDuration: 100,
