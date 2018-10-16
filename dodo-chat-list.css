@@ -94,7 +94,7 @@
 }
 
 /* emoji list */
-.emoji-menu > .emoji-items-wrap1 {
+.emoji-items-wrap1 {
     position: fixed;
     width: 300px;
     background-color: #FEFEFE;
