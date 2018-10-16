@@ -51,7 +51,7 @@ if (showChatRoom) {
 
 	// add chatButton into action td
 	let chatButton = document.createElement('a');
-	chatButton.appendChild(document.createTextNode("Chat"));
+	chatButton.appendChild(document.createTextNode("訊息"));
 	chatButton.classList.add('btn');
 	chatButton.classList.add('waves-effect');
 	chatButton.classList.add('waves-light');
@@ -98,7 +98,7 @@ if (showChatRoom) {
 		    //     if (document.querySelector('#chat-room').classList.contains('hide')) {
 		    //         show_chat_room();
             //     }
-            console.log('nothing');
+            // console.log('nothing');
 		    }
 		});
 	});
