@@ -70,9 +70,9 @@
 /*
  *     emoji-picker
  *     */
-.emoji-picker-icon,
-.emoji-picker-icon.parent-has-scroll {
-    right: 6em;
+i.emoji-picker-icon.emoji-picker.fa.fa-smile-o {
+    right: 120px;
+    font-size: 27px;
 }
 .emoji-wysiwyg-editor {
     height: 100%;
