@@ -43,6 +43,10 @@
 }
 .msg {
     margin-top: 5px;
+    border-radius: 1.3em;
+    border: 1px solid #CCC;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 .msg span {
     font-family: '微軟正黑體';
@@ -50,6 +54,8 @@
     margin-left: 2px;
     text-decoration: underline;
     padding: 0.5em;
+    position: relative;
+    top: 5px;
 }
 .msg span::after {
     content: ':';
@@ -105,4 +111,12 @@ i.emoji-picker-icon.emoji-picker.fa.fa-smile-o {
     width: 300px;
     background-color: #FEFEFE;
     border: 1px solid #DDD;   
+}
+
+.other-message {
+    background-color: #f1f0f0;
+}
+
+.self-message {
+    background-color: #FFFFE0;
 }
