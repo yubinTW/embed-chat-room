@@ -40,13 +40,20 @@
 }
 .msg {
     margin-top: 5px;
+    border-radius: 1.3em;
+    border: 1px solid #CCC;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 5px;
 }
 .msg span {
     font-family: '微軟正黑體';
-    font-size: 1.2em;    
+    font-size: 1.2em;
     margin-left: 2px;
     text-decoration: underline;
     padding: 0.5em;
+    position: relative;
+    top: 5px;
 }
 .msg span::after {
     content: ':';
